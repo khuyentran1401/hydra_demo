@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "hydra_demo"
+version = "0.1.0"
+description = ""
+authors = ["Khuyen <khuyentran1476@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+hydra-core = "^1.1.1"
+scikit-learn = "^1.0.2"
+yellowbrick = "^1.4"
+pandas = "^1.4.1"
+numpy = "^1.22.3"
+matplotlib = "^3.5.1"
+dvc = "^2.9.5"
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^2.17.0"
+commitizen = "^2.21.2"
+
+[tool.black]
+line-length = 120
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+

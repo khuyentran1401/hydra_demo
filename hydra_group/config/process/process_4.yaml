@@ -1,0 +1,14 @@
+keep_columns:
+  - Income
+  - Recency
+  - MntWines
+  - MntFruits
+  - MntMeatProducts
+  - MntFishProducts
+  - MntSweetProducts
+  - MntGoldProds
+  - Complain
+  - Response
+  - age
+  - enrollment_years
+  - family_size

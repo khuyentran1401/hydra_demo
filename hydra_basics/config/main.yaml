@@ -1,0 +1,42 @@
+hydra:  
+  output_subdir: null  
+  run:  
+    dir: .
+
+raw_data: 
+  path: data/raw/marketing_campaign.csv
+
+intermediate:
+  dir: data/intermediate
+  name: scale_features.csv
+  path: data/intermediate/scale_features.csv
+
+flow: all 
+
+keep_columns:
+    - Income
+    - Recency
+    - NumWebVisitsMonth
+    - Complain
+    - age
+    - total_purchases
+    - enrollment_years
+    - family_size
+
+remove_outliers_threshold:
+  age: 90
+  Income: 600000
+
+family_size:
+  Married: 2
+  Together: 2
+  Absurd: 1
+  Widow: 1
+  YOLO: 1
+  Divorced: 1
+  Single: 1
+  Alone: 1
+  
+image:
+  kmeans: image/elbow.png
+  clusters: image/cluster.png

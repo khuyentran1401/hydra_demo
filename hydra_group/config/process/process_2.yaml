@@ -1,0 +1,10 @@
+keep_columns:
+    - Income
+    - Recency
+    - NumWebVisitsMonth
+    - Complain
+    - age
+    - total_purchases
+    - enrollment_years
+    - family_size
+
