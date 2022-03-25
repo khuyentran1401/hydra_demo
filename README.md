@@ -1,7 +1,7 @@
 # Demo for hydra
 
 ## How to Run the Project
-1. Clone this branch:
+1. Clone this repository:
 ```bash
 git clone https://github.com/khuyentran1401/hydra_demo.git
 ```
