@@ -16,4 +16,9 @@ make setup
 [![](https://img.youtube.com/vi/IzEngnqOaRA/0.jpg)](https://www.youtube.com/watch?v=IzEngnqOaRA "Hydra: Configure Complex Application in Python
 ")
 
+Folders shown in the video:
+- [without_config](./without_config)
+- [hydra_basics](./hydra_basics)
+
+
 
