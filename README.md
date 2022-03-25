@@ -1,4 +1,7 @@
-# Demo for hydra
+# Demo for Hydra
+
+## About Hydra
+[Hydra](https://hydra.cc/) is a Python tool to manage complex configurations in your data science projects.
 
 ## How to Run the Project
 1. Clone this repository:
