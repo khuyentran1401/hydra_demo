@@ -62,63 +62,7 @@ Output:
 ```bash
 ['Income', 'Recency', 'NumWebVisitsMonth', 'Complain', 'age', 'total_purchases', 'enrollment_years', 'family_size']
 ```
-## Group Configuration Files
-# Demo for Hydra
 
-## About Hydra
-[Hydra](https://hydra.cc/) is a Python tool to manage complex configurations in your data science projects.
-
-## How to Run the Project
-1. Clone this repository:
-```bash
-git clone https://github.com/khuyentran1401/hydra_demo.git
-```
-2. Install [Poetry](https://python-poetry.org/docs/#installation)
-3. Set up the environment:
-```bash
-make setup
-```
-
-## Introduction to Hydra
-
-[![](https://img.youtube.com/vi/IzEngnqOaRA/0.jpg)](https://www.youtube.com/watch?v=IzEngnqOaRA "Hydra: Configure Complex Application in Python
-")
-
-### Folders
-Folders shown in the video:
-- [without_config](./without_config)
-- [hydra_basics](./hydra_basics)
-
-### Short Summary
-Imagine the structure of your `config` directory looks like this:
-
-```bash
-config
-├── main.yaml
-└── process
-    ├── process_1.yaml
-    ├── process_2.yaml
-    ├── process_3.yaml
-    └── process_4.yaml
-```
-To access the list under `process.keep_columns` in the configuration file, simple add the `@hydra.main` decorator to the function that uses the configuration:
-
-```python
-import hydra
-from omegaconf import DictConfig, OmegaConf
-
-
-@hydra.main(config_path="../config", config_name="main")
-def process_data(config: DictConfig):
-
-    print(config.process.keep_columns)
-
-process_data()
-```
-Output:
-```bash
-['Income', 'Recency', 'NumWebVisitsMonth', 'Complain', 'age', 'total_purchases', 'enrollment_years', 'family_size']
-```
 ## Group Configuration Files and Override the Parameters on the Command Line
 
 [![](https://img.youtube.com/vi/t9hwWxBnU0o/0.jpg)](https://youtu.be/t9hwWxBnU0o "Hydra: Configure Complex Applications in Python - Useful Features")
