@@ -8,9 +8,9 @@ activate:
 
 pull_data:
 	@echo "Pulling data..."
-	poetry run dvc pull
+	poetry run dvc pull -r origin
 
-setup: activate install pull_data
+setup: install pull_data
 
 
 	
