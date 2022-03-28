@@ -2,3 +2,6 @@ hydra-demo-msd8QFNb-py3.8
 __pycache__
 .cache
 *.mypy_cache
+*.log
+.DS_Store
+*.csv

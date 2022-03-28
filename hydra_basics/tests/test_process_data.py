@@ -1,7 +1,6 @@
 import pandas as pd
 from pandas.testing import assert_frame_equal
-from src.process_data import (get_age, get_enrollment_years, get_family_size,
-                              get_total_purchases, scale_features)
+from src.process_data import get_age, get_enrollment_years, get_family_size, get_total_purchases, scale_features
 
 
 def test_get_age():

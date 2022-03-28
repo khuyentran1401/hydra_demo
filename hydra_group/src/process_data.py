@@ -26,7 +26,7 @@ def get_total_purchases(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def get_enrollment_years(df: pd.DataFrame) -> pd.DataFrame:
-    df["Dt_Customer"] = pd.to_datetime(df["Dt_Customer"])
+    df["Dt_Customer"] = pd.to_datetime(df["Dt_Customer"], format="%d-%m-%Y")
     return df.assign(enrollment_years=2022 - df["Dt_Customer"].dt.year)
 
 

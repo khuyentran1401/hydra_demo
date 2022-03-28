@@ -10,4 +10,3 @@ git clone https://github.com/khuyentran1401/hydra_demo.git
 ```bash
 make setup
 ```
-4. Start with [step0](./step0).

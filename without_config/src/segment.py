@@ -1,14 +1,12 @@
-import os
 from typing import Tuple
 
-import hydra
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from omegaconf import DictConfig
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 from yellowbrick.cluster import KElbowVisualizer
+import os
 
 
 def get_pca_model(data: pd.DataFrame) -> PCA:
@@ -69,19 +67,26 @@ def plot_clusters(pca_df: pd.DataFrame, preds: np.ndarray, projections: dict, im
     plt.savefig(image_path)
 
 
-@hydra.main(config_path="../config", config_name="main")
-def segment(config: DictConfig) -> None:
+def segment() -> None:
 
-    data = pd.read_csv(config.intermediate.path)
+    data = pd.read_csv("data/intermediate/processed.csv")
     pca = get_pca_model(data)
     pca_df = reduce_dimension(data, pca)
 
     projections = get_3d_projection(pca_df)
 
-    k_best = get_best_k_cluster(pca_df, image_path=config.image.kmeans)
+    k_best = get_best_k_cluster(
+        pca_df,
+        image_path="image/elbow.png",
+    )
     preds = get_clusters(pca_df, k_best)
 
-    plot_clusters(pca_df, preds, projections, image_path=config.image.clusters)
+    plot_clusters(
+        pca_df,
+        preds,
+        projections,
+        image_path="image/cluster.png",
+    )
 
 
 if __name__ == "__main__":
