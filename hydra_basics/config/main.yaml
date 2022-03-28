@@ -15,14 +15,14 @@ flow: all
 
 process:
   keep_columns:
-      - Income
-      - Recency
-      - NumWebVisitsMonth
-      - Complain
-      - age
-      - total_purchases
-      - enrollment_years
-      - family_size
+  - Income
+  - Recency
+  - NumWebVisitsMonth
+  - Complain
+  - age
+  - total_purchases
+  - enrollment_years
+  - family_size
 
   remove_outliers_threshold:
     age: 90

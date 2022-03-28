@@ -1,3 +1,4 @@
+import os
 from typing import Tuple
 
 import matplotlib.pyplot as plt
@@ -6,7 +7,6 @@ import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 from yellowbrick.cluster import KElbowVisualizer
-import os
 
 
 def get_pca_model(data: pd.DataFrame) -> PCA:
