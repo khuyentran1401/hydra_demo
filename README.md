@@ -11,6 +11,7 @@ git clone https://github.com/khuyentran1401/hydra_demo.git
 2. Install [Poetry](https://python-poetry.org/docs/#installation)
 3. Set up the environment:
 ```bash
+make activate
 make setup
 ```
 
